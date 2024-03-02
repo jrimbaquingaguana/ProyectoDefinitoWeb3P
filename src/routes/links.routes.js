@@ -5,6 +5,7 @@ import {
   renderAddLink,
   addLink,
   renderLinks,
+  renderCursoLink,
   deleteLink,
   editLink,
   renderEditLink,
@@ -14,6 +15,7 @@ import { createLinkSchema } from "../schemas/task.schema.js";
 const router = Router();
 
 router.get("/", isLoggedIn, renderLinks);
+router.get("/curso", isLoggedIn, renderCursoLink);
 router.get("/add", isLoggedIn, renderAddLink);
 router.post("/add", isLoggedIn, validator(createLinkSchema), addLink);
 router.get("/delete/:id", isLoggedIn, deleteLink);

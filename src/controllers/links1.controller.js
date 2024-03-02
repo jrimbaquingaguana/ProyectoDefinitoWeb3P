@@ -13,7 +13,7 @@ export const addLink = async (req, res) => {
     },
   ]);
   await req.setFlash("success", "Link Saved Successfully");
-  res.redirect("/links1");
+  res.redirect("/links and /links1");
 };
 
 export const renderLinks = async (req, res) => {
@@ -21,6 +21,8 @@ export const renderLinks = async (req, res) => {
     req.user.rol,
   ]);
   res.render("links/list1", { links: rows });
+
+
 };
 
 export const deleteLink = async (req, res) => {

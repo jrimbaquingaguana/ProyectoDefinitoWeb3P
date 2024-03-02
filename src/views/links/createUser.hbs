@@ -1,0 +1,37 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <form class="card card-body bg-dark text-white p-5" action="/signup" method="POST">
+        <h3 class="text-center fw-bold mb-4">SignUp</h3>
+
+        <label for="fullname">Escriba su nombre:
+        </label>
+        <input type="type" name="fullname" placeholder="Jose Imbaquinga" class="form-control mb-3" autofocus />
+
+        <label for="username">Escriba su correo::</label>
+        <input type="email" name="email" placeholder="ricardo@gmail.com" class="form-control mb-3" />
+
+        <label for="password">Escriba su contraseña</label>
+        <input type="password" name="password1" placeholder="Password" class="form-control mb-3" />
+
+        {{!-- Confirm your password --}}
+        <label for="password">Confirma tu contraseña:</label>
+        <input type="password" name="password2" placeholder="Password" class="form-control mb-3" />
+
+       <label for="role">Selecciona el rol:</label>
+        <select name="role" class="form-control mb-3">
+        <option value="1">Estudiante</option>
+        <option value="2">Profesor</option>
+        <option value="3">Administrador</option>
+        </select>
+
+        <button class="btn btn-success btn-block">
+          Register
+        </button>
+    </div>
+    </form>
+
+ 
+    
+  </div>
+</div>

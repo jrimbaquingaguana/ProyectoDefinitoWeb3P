@@ -4,6 +4,7 @@ import index from "./index.routes.js";
 import links from "./links.routes.js";
 import links1 from "./link1.routes.js";
 import user from "./user.routes.js";
+
 import { pool } from "../database.js";
 
 const router = Router();
