@@ -1,0 +1,25 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card card-body bg-dark text-white text-center">
+        <h1 class="text-primary">Bienvenido</h1>
+        <h2 class="fw-bold text-primary">{{user.fullname}}</h2>
+        <table class="table table-dark table-borderless">
+          <tbody>
+            <tr>
+              <td style="color: #28a745; font-weight: bold;">Tu correo:</td>
+              <td class="text-white">{{user.email}}</td>
+            </tr>
+            <tr>
+              <td style="color: #28a745; font-weight: bold;">Eres miembro desde hace:</td>
+              <td class="text-white">{{timeago user.created_at 'es'}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="/links" class="btn btn-primary m-4">
+          Continúa explorando los cursos que disponemos
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
