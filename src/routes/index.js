@@ -19,12 +19,12 @@ router.use(async (req, res, next) => {
         const [rows] = await pool.query("SELECT usuario FROM users WHERE usuario = ?", [userId]);
         if (rows.length > 0) {
             const usuario = rows[0].usuario;
-            if (usuario === 2) {
+            if (usuario === 1) {
                 // Crear un nuevo router para /links y montar el router de links en él
                 const linksRouter = Router();
                 linksRouter.use(links);
                 router.use("/links", linksRouter);
-            } else if (usuario === 1) {
+            } else if (usuario === 2) {
                 // Crear un nuevo router para /links1 y montar el router de links1 en él
                 const links1Router = Router();
                 links1Router.use(links1);
