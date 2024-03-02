@@ -16,6 +16,12 @@
         {{!-- Confirm your password --}}
         <label for="password">Confirm your password:</label>
         <input type="password" name="password2" placeholder="Password" class="form-control mb-3" />
+      <label for="role" style="display: none;">Selecciona el rol:</label>
+<select name="role" class="form-control mb-3" style="display: none;">
+  <option value="2" selected>Estudiante</option>
+  <option value="3">Profesor</option>
+  <option value="1">Administrador</option>
+</select>
 
         <button class="btn btn-success btn-block">
           Register

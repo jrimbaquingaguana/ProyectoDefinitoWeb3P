@@ -8,7 +8,7 @@ export const renderCursoLink = async (req, res) => {
       const usuario = rows[0].usuario;
       if (usuario === 1) {
         res.render("links/createUser");
-      } else if (usuario === 2) {
+      } else if (usuario === 2 || usuario === 3) {
         res.render("links/add1");
       } else {
         // Manejar otros roles si es necesario
@@ -44,8 +44,8 @@ export const renderAddLink = async (req, res) => {
     const [rows] = await pool.query("SELECT usuario FROM users WHERE usuario = ?", [userId]);
     if (rows.length > 0) {
       const usuario = rows[0].usuario;
-      if (usuario === 1) {
-        res.render("links/add");
+      if (usuario === 1 || usuario === 3 ) {
+        res.render("links/add"); 
       } else if (usuario === 2) {
         res.render("links/add1");
       } else {
@@ -71,7 +71,7 @@ export const renderLinks = async (req, res) => {
     const [rows] = await pool.query("SELECT usuario FROM users WHERE usuario = ?", [userId]);
     if (rows.length > 0) {
       const usuario = rows[0].usuario;
-      if (usuario === 1) {
+      if (usuario === 1 || usuario ===3) {
         // Renderizar la lista de enlaces para el rol 1
         const [rows] = await pool.query("SELECT * FROM links WHERE rol = ?", [
           req.user.rol,
